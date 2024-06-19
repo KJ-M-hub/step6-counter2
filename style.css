@@ -10,6 +10,31 @@
 }
 
 .button {
-    font-size: 16px;
+    font-size: 20px;
     padding: 10px 20px;
+    border: 0;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
 }
+/* 
+.button.button-inc {
+
+}
+.button.button-dec {
+
+} 
+*/
+.button:hover {
+    opacity: 0.6;
+    transition: opacity .25s;
+}
+
+
+/*
+#js-reset {
+
+} */
