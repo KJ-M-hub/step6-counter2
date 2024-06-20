@@ -7,9 +7,8 @@
 
     /*
     clickHandler関数
-    クリックした場所の情報を選択し(e.currentTarget)、そのテキスト内容が＋なら
-    数値化したカウンター(parseInt($counter.textContent))に１を足し、
-    そうでなければ１をひくという命令
+    クリックした場所の情報を選択し(e.currentTarget)、そのテキスト内容に合わせて
+    数字を加減していく命令
     */
     const clickHandler = (e) => {
         const $targetButton = e.currentTarget;
@@ -19,6 +18,13 @@
         } else {
             $counter.textContent = currentCount - 1;
         }
+
+        if($targetButton.textContent === "+10") {
+            $counter.textContent = currentCount + 10;
+        } else if($targetButton.textContent === "-10"){
+            $counter.textContent = currentCount - 10;
+        }
+
     }
 
     /*同じ命令を複数書くのは冗長なのでfor文を使う。
