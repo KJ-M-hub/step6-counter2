@@ -38,7 +38,10 @@
         $plusBtn.addEventListener("mousedown",() => {
             (e) => clickHandler(e);
             let intervalId = setInterval(startContinueClick,100);
-            $plusBtn.addEventListener("mouseup"||"mouseleave",() => {
+            $plusBtn.addEventListener("mouseup",() => {
+                clearInterval(intervalId);
+            });
+            $plusBtn.addEventListener("mouseleave",() => {
                 clearInterval(intervalId);
             });
         });
@@ -46,7 +49,10 @@
         $minusBtn.addEventListener("mousedown",() => {
             (e) => clickHandler(e);
             let intervalId = setInterval(startContinueClick,100);
-            $minusBtn.addEventListener("mouseup"||"mouseleave",() => {
+            $minusBtn.addEventListener("mouseup",() => {
+                clearInterval(intervalId);
+            });
+            $minusBtn.addEventListener("mouseleave",() => {
                 clearInterval(intervalId);
             });
         });
