@@ -20,21 +20,16 @@
     border-radius: 5px;
     margin: 0 5px;
 }
-/*
-.button.button-inc {
-
+#js-plus-button {
+    background-color: blue;
+    border: solid #000 1px;
 }
-.button.button-dec {
-
+#js-minus-button {
+    background-color: orangered;
+    border: solid #000 1px;
 }
-*/
 .button:hover {
     opacity: 0.6;
     transition: opacity .25s;
 }
 
-
-/*
-#js-reset {
-
-} */

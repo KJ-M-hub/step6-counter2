@@ -37,7 +37,7 @@
         //＋ボタン上でマウスを押し続けたら数字が増えるイベント
         $plusBtn.addEventListener("mousedown",() => {
             (e) => clickHandler(e);
-            let intervalId = setInterval(startContinueClick,150);
+            let intervalId = setInterval(startContinueClick,170);
             $plusBtn.addEventListener("mouseup",() => {
                 clearInterval(intervalId);
             });
@@ -48,7 +48,7 @@
         //ーボタン上でマウスを押し続けたら数字が減り続けるイベント
         $minusBtn.addEventListener("mousedown",() => {
             (e) => clickHandler(e);
-            let intervalId = setInterval(startContinueClick,150);
+            let intervalId = setInterval(startContinueClick,170);
             $minusBtn.addEventListener("mouseup",() => {
                 clearInterval(intervalId);
             });
