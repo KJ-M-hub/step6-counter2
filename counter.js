@@ -4,6 +4,8 @@
         const $counter = document.getElementById("js-counter");
         const $plusBtn = document.getElementById("js-plus-button");
         const $minusBtn = document.getElementById("js-minus-button");
+        const $plus10Btn = document.getElementById("js-plus10-button");
+        const $minus10Btn = document.getElementById("js-minus10-button");
         // let intervalId;
         /*
         clickHandler関数
@@ -57,11 +59,38 @@
             });
         });
 
+        //＋10ボタン上でマウスを押し続けたら数字が増えるイベント
+        $plus10Btn.addEventListener("mousedown",() => {
+            (e) => clickHandler(e);
+            let intervalId = setInterval(startContinueClick,170);
+            $plus10Btn.addEventListener("mouseup",() => {
+                clearInterval(intervalId);
+            });
+            $plus10Btn.addEventListener("mouseleave",() => {
+                clearInterval(intervalId);
+            });
+        });
+         //ー10ボタン上でマウスを押し続けたら数字が減り続けるイベント
+         $minus10Btn.addEventListener("mousedown",() => {
+            (e) => clickHandler(e);
+            let intervalId = setInterval(startContinueClick,170);
+            $minus10Btn.addEventListener("mouseup",() => {
+                clearInterval(intervalId);
+            });
+            $minus10Btn.addEventListener("mouseleave",() => {
+                clearInterval(intervalId);
+            });
+        });
+
         const startContinueClick = (e) => {
             if(document.activeElement === $plusBtn){
                 $counter.textContent = parseInt($counter.textContent) + 1;
             }else if(document.activeElement === $minusBtn){
                 $counter.textContent = parseInt($counter.textContent) - 1;
+            }else if(document.activeElement === $plus10Btn){
+                $counter.textContent = parseInt($counter.textContent) + 10;
+            }else if(document.activeElement === $minus10Btn){
+                $counter.textContent = parseInt($counter.textContent) - 10;
             }
         };
 
